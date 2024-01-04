@@ -15,10 +15,23 @@
         valueTypesCheck(a);
 
         Console.WriteLine(a);
+
+        //---------------------------------------
+
+        int[] arrayNum1 = new []{32};
+
+        referenceTypesCheck(arrayNum1);
+
+        Console.WriteLine(arrayNum1[0]);
     }
 
     public static void valueTypesCheck(int value)
     {
          value = 10;
+    }
+
+    static void referenceTypesCheck(int[] array)
+    {
+        array[0] = 5;
     }
 }
