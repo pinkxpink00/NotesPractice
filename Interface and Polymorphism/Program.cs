@@ -4,25 +4,50 @@ class Program
 {
     static void Main(string[] args)
     {
-        Transport ship = new Ship("Ship");
+        var circle = new Circle{Radius = 200};
+        var rectangle = new Rectangle { Height = 200, Width = 200 };
 
-        ship.Move();
+        PrintShape(rectangle);
+        PrintShape(circle);
     }
-}
 
-class Ship : Transport
-{
-    public Ship(string name) : base(name) { }
-}
-
-abstract class Transport
-{
-    public string Name { get; set; }
-
-    public Transport(string name)
+    static void PrintShape(Shape shape)
     {
-        Name = name;
+        Console.WriteLine($"Perimeter: {shape.GetPerimeter()}. Area: {shape.GetArea()}");
+    }
+}
+
+abstract class Shape
+{
+    public abstract double GetPerimeter ();
+    public abstract double GetArea();
+}
+
+class Rectangle : Shape
+{
+    public float Width { get; set; }
+    public float Height { get; set; }
+
+    public override double GetArea() => Width * 2 + Height *2;
+
+    public override double GetPerimeter() => Width * Height;
+}
+
+class Circle : Shape
+{
+    public float Radius { get; set; }
+
+    public override double GetArea()
+    {
+        double resArea = Radius * 2 * 3.14; 
+
+        return resArea;
     }
 
-    public void Move() => Console.WriteLine($"{Name} moves");
+    public override double GetPerimeter()
+    {
+        double resPer = Radius * Radius * 3.14;
+
+        return resPer;
+    }
 }
