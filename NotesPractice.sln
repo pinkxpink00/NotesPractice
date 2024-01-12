@@ -9,7 +9,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "reference&value_type", "ref
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "abstract", "Interface and Polymorphism\abstract.csproj", "{EAFCE890-9EAB-4497-8C38-89F2A10E0044}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "static", "static\static.csproj", "{866FBD0C-6FA4-4F1E-804A-2F252EDA3413}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "static", "static\static.csproj", "{866FBD0C-6FA4-4F1E-804A-2F252EDA3413}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Collections", "Collections\Collections.csproj", "{629DB59C-B1BB-4545-9D5C-7AB064663168}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{866FBD0C-6FA4-4F1E-804A-2F252EDA3413}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{866FBD0C-6FA4-4F1E-804A-2F252EDA3413}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{866FBD0C-6FA4-4F1E-804A-2F252EDA3413}.Release|Any CPU.Build.0 = Release|Any CPU
+		{629DB59C-B1BB-4545-9D5C-7AB064663168}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{629DB59C-B1BB-4545-9D5C-7AB064663168}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{629DB59C-B1BB-4545-9D5C-7AB064663168}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{629DB59C-B1BB-4545-9D5C-7AB064663168}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
