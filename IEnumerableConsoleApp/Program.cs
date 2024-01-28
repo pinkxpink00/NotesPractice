@@ -1,64 +1,26 @@
-﻿using System;
-
-namespace InterfacePractice
+﻿namespace trainIEnum
 {
-    // Создаем два интерфейса, описывающих абстрактные методы 
-    // арифметических операций и операций Sqrt и Sqr
-    interface IArithmeticOperation
+    class Program
     {
-        int Addition();
-        int Substraction();
-        int Multiplication();
-        int Division();
-    }
-
-    interface IRealizeArithmeticOperation
-    {
-        int RealizeVol_1(int x);
-        int RealizeVol_2(int x);
-    }
-
-    class FirstRealize : IArithmeticOperation
-    {
-        private int valueX;
-        private int valueY;
-
-        public int x
+        static void Main()
         {
-            set { valueX = value;}
-            get { return valueX; }
-        }
+            //IEnumerable 
+            IEnumerable<int> numbers = new List<int> { 1, 2, 3, 4, 5 };
 
-        public int y
-        {
-            set { valueY = value; }
-            get { return valueY; }
-        }
+            foreach (var num in numbers)
+            {
+                Console.WriteLine(num);
+            }
+            
+            //IEnumerator
 
-        public FirstRealize(int x, int y)
-        {
-            this.x = x;
-            this.y = y;
-        }
-        
-        public int Addition()
-        {
-            throw new NotImplementedException();
-        }
+            IEnumerator<int> enumerator = numbers.GetEnumerator();
 
-        public int Substraction()
-        {
-            throw new NotImplementedException();
-        }
-
-        public int Multiplication()
-        {
-            throw new NotImplementedException();
-        }
-
-        public int Division()
-        {
-            throw new NotImplementedException();
+            while (enumerator.MoveNext())
+            {
+                var num = enumerator.Current;
+                Console.WriteLine(num);
+            }
         }
     }
 }
